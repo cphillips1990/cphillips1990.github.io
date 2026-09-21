@@ -1,8 +1,49 @@
+/* Here we overwrite the browser's default spacing to make sizing more predicatable*/
+*, *::before, *::after {
+  box-sizing: border-box; 
+  margin:0;
+  padding:0;
+}
+/*
+    *             → every HTML element
+    *::before     → every element's ::before pseudo-element
+    *::after      → every element's ::after pseudo-element
+*/
+
+:root {
+  --blue: #0a61ae;
+}
+
+
 body {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-size: 20px;
   font-variation-settings:
     "wdth" 100;
+
+}
+
+/* overwriting the default link appearance */
+a {
+  text-decoration: none;
+  color: var(--blue);
+  & :hover {
+    text-decoration: underline;
+  }
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display:flex;
+  justify-content: space-between;
+  max-width:1440px;
+  margin:auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  
+  font-style: italic;
+
 }
