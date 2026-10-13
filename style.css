@@ -1,9 +1,16 @@
 /* Here we overwrite the browser's default spacing to make sizing more predicatable*/
+/*
 *, *::before, *::after {
   box-sizing: border-box; 
   margin:0;
   padding:0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+
 }
+*/
+
 /*
     *             → every HTML element
     *::before     → every element's ::before pseudo-element
@@ -11,11 +18,12 @@
 */
 
 :root {
-  --blue: #0a61ae;
+  /*--blue: #0a61ae;*/
 }
 
 
 body {
+  /*
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -23,27 +31,124 @@ body {
   font-size: 20px;
   font-variation-settings:
     "wdth" 100;
-
+ */
 }
 
-/* overwriting the default link appearance */
+/* overwriting the default link appearance
+
 a {
+  /*
   text-decoration: none;
   color: var(--blue);
   & :hover {
     text-decoration: underline;
   }
+  */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  color: aliceblue;
 }
 
 header {
+  /*
   padding-top: 10px;
   padding-bottom: 10px;
-  display:flex;
   justify-content: space-between;
   max-width:1440px;
   margin:auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  
-  font-style: italic;
+  */
+  position: fixed;
+  top: 1rem;
+  left:50%;
+  transform: translateX(-50%); /*allows 'true' centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* font-style: italic; */
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  z-index: 1000; /*keep the menu at top of page*/
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
+}
+
+
+
+.logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+  transform: scale(1.1);
 
 }
+
+.nav-links{
+  display: flex;
+  gap:2rem;
+
+}
+li a{
+  position: relative;
+  color: white;
+  font-weight: 300;
+}
+li a::before{
+  position:absolute;
+  content: '';
+  width: 0;
+  left: 0;
+  height: 2px;
+  top: 25px;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+}
+li a:hover::before{
+  width: 100%;
+}
+.visit-btn{
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, rgb(69, 121, 199), rgb(247, 127, 15));
+}
+
+.visit-btn:hover{
+  background: linear-gradient(to right,  rgb(247, 127, 15), rgb(69, 121, 199));
+  transform: scale(1.03);
+
+}
+#menu-icon{
+  font-size: 2rem;
+  display: none;
+}
+
+body{
+  background-color: rgba(53, 61, 78, 0.918);
+  padding-top: 5rem;
+  text-align:left;
+  padding-left: 1rem;
+
+  }
