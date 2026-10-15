@@ -157,7 +157,7 @@ body{
 
 
   p {
-    color: rgb(236, 226, 209, 0.918);
+    color: rgb(1, 170, 212);
     font-size: larger;
   }
 
@@ -167,11 +167,22 @@ body{
   }
 
   h2 {
-      color: rgb(0, 0, 0);
+    color: rgb(255, 0, 106);  
   }
 
   ul{
-    color: rgb(10, 98, 180);
+    color: rgb(1, 170, 212);
+  }
+
+  .content-section{
+    background-color:rgb(255, 255, 255);
+    max-width: 40%;
+    margin: 0 auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-align: center;  
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
   }
 
   .footer{
@@ -181,6 +192,7 @@ body{
     justify-content: center;
     left: 50%;
     transform: translateX(-50%); /*allows 'true' centering*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
 
 
   }
