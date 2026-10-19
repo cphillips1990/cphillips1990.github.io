@@ -145,7 +145,7 @@ li a:hover::before{
 }
 
 body{
-  /*background-color: rgba(236, 226, 209, 0.918);*/
+  background-color: black; /* behind backg img */
   padding-top: 5rem;
   text-align:left;
   /*padding-left: 1rem;*/
@@ -174,7 +174,7 @@ body{
 
   .content-section{
     background-color:rgb(255, 255, 255);
-    max-width: 42rem;
+    max-width: 38rem;
     margin: 0 auto;
     padding: .5rem;
     text-align: center;  
@@ -185,6 +185,8 @@ body{
 
   .content-section:hover {
     animation: wobble 0.7s ease-in-out infinite;
+    animation-duration: 2.1s;
+    animation-iteration-count: 1;
   }
   @keyframes wobble {
     0%, 100% {transform: rotate(0deg); }
