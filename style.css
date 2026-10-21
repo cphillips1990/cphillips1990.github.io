@@ -203,9 +203,13 @@ body{
     transform: translateX(-50%); /*allows 'true' centering*/
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.5);
     border-radius: 3rem;
-
+    
   }
 
+  button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
   /* FOR THE BOX WOBBLE EFFECT ONLY - Disable animation for reduced motion users*/
   @media (prefers-reduced-motion: reduce) {
     .content-section:hover {
