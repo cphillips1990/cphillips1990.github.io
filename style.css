@@ -175,6 +175,7 @@ ul{
   background-color:rgb(255, 255, 255);
   max-width: 38rem;
   margin: 0 auto;
+  margin-bottom: 2rem;
   padding: .5rem;
   text-align: center;  
   border-radius: 15px;
@@ -192,6 +193,29 @@ ul{
   0%, 100% {transform: rotate(0deg); }
   25% { transform: rotate(-1deg); }
   75% { transform: rotate(1deg); }
+}
+
+form {
+  margin-top: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(37, 165, 69);
+}
+
+.error-message {
+  color: red;
+  font-size: 1.5rem;
+  display: none;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
 .footer{

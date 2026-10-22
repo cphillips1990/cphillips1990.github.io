@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device=width, initial-scale=1.0"> 
+    <title>CBP Portfolio - Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./scripts.js"></script>
+    
+    <!--A link to an icon CSS page. Can replace with own illustrations later if preferred-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+    
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><span>Christopher Phillips</span></a>
+        <!--iv class="logo-text">Christopher Phillips</div>
+        </a> -->
+
+        <nav>
+            <ul class="nav-links">
+                
+                <li>
+                    <a href="#" onclick="window.location.href='https://www.linkedin.com/in/christopher-phillips-aa1825308'">LinkedIn</a>
+                </li>
+                
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+    
+            </ul>
+
+        </nav>
+    
+    </header>
+    
+    <main>
+        <section class="content-section"> 
+            <h1>Contact Me</h1>
+            <!--REMEMBER: Using Formspree to test form backend.-->
+            <!--CONSIDER a honeypot field to deter spam-->
+            <form action="https://formspree.io/f/mrppzord" method="POST" id="contact-form">
+                
+                <div class="form-group">
+                    <label for="name">Who are you?</label>
+                    <input type="text" id="name"
+                            name="name"
+                            placeholder="Your name*" required>
+                    <span class="error-message" id="nameError"></span>
+
+
+                    <label for="Your email address"></label>
+                    <input type="text" id="email"
+                            name="visitorEmail"
+                            placeholder="Your email address*" required>
+                    <span class="error-message" id="emailError"></span>
+
+                    
+
+                    <label for="message">How can I help?</label>
+                    <textarea id="message"
+                            name="visitorMessage"
+                            placeholder="Please enter your message here*" 
+                            rows=5 required></textarea>
+                    <span class="error-message" id="messageError"></span>
+
+                    <button type="submit" class="visit-btn">Send</button>
+                </div>
+
+            </form>
+        </section>   
+    </main>
+
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <script src="script.js"></script>
+
+    <!--
+<footer class="footer">
+    <!-- <button class="visit-btn" onclick="window.location.href='https://www.linkedin.com/in/christopher-phillips-aa1825308'">Visit LinkedIn</button>
+    <a class="visit-btn" 
+       href="assets/Christopher Phillips CV.pdf" 
+       download="Christopher Phillips CV.pdf">
+       Download CV</a>
+</footer>
+-->
+
+</body>
+
+</html>
