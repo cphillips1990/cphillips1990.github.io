@@ -1,5 +1,15 @@
 //script.js
 
+//NAV MENU INTERACTION
+
+const menuIcon = document.querySelector('#menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.onclick = () => {
+    navLinks.classList.toggle('active')
+}
+
+//CONTACT FORM VALIDATION
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
