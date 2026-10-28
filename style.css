@@ -230,6 +230,12 @@ input, textarea {
   border-radius: 3rem;
 }
 
+/*See JS files for this one.*/
+.required {
+  position: absolute;
+  left: -10000px;
+}
+
 /* FOR THE BOX WOBBLE EFFECT ONLY - Disable animation for reduced motion users*/
 @media (prefers-reduced-motion: reduce) {
   .content-section:hover {

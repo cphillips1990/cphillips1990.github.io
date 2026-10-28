@@ -1,7 +1,8 @@
 //script.js
 
-//NAV MENU INTERACTION
+import { preventSpam } from "./spam-prevention";
 
+//NAV MENU INTERACTION
 const menuIcon = document.querySelector('#menu-icon');
 const navLinks = document.querySelector('.nav-links');
 
@@ -9,7 +10,14 @@ menuIcon.onclick = () => {
     navLinks.classList.toggle('active')
 }
 
-//CONTACT FORM VALIDATION
+
+//CONTACT FORM VALIDATION - includes honeypot check
+
+//initialise spam protection
+let form = document.querySelector('form') //assign the first form in the page to a variable
+preventSpam(form, { honeypotField: 'required' })
+
+// validate form when 'submit' is clicked
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -49,7 +57,8 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     //If form is valid, allow submission
     if (isValid) {
-        event.target.submit();
+        if (form.containsSpam()) return
+        else event.target.submit();
         /*consider adding a check to see if the backend has processed the message*/
         alert('Message sent. Thanks for getting in touch!')
     }
