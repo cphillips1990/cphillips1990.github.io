@@ -1,13 +1,14 @@
 //script.js
 
-import { preventSpam } from "./spam-prevention";
+import { preventSpam } from "./spam-prevention.js";
+/*alert('JavaScript is working!'); FOR DEBUGGIN ONLY*/
 
 //NAV MENU INTERACTION
 const menuIcon = document.querySelector('#menu-icon');
 const navLinks = document.querySelector('.nav-links');
 
 menuIcon.onclick = () => {
-    navLinks.classList.toggle('active')
+    navLinks.classList.toggle('active'); 
 }
 
 
