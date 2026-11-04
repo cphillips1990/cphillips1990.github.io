@@ -6,19 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width-device=width, initial-scale=1.0"> 
     <title>CBP Portfolio Page</title>
-
-
-<!-- Google font details 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
--->
    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 
     <link rel="stylesheet" href="./style.css">
     <script src="./scripts.js"></script>
@@ -41,7 +32,7 @@
                 </li>
                 
                 <li>
-                    <a href="#">Projects</a>
+                    <a href="index.html#carousel">Projects</a>
                 </li>
 
                 <li>
@@ -50,8 +41,11 @@
     
             </ul>
 
-
             <i class="fa-solid fa-bars" id="menu-icon"></i> <!--THIS IS THE MENU BURGER ICON-->
+            <!-- why fa-solid fa-bars? 
+                    fa       — Font Awesome, an icon library.
+                    fa-solid — selects the solid icon style.
+                    fa-bars  — displays the three horizontal lines commonly used for a mobile navigation menu (the hamburger icon). -->
         </nav>
     
     </header>
@@ -91,6 +85,115 @@ marketing.
             <li>Team management</li>
         </ul>    
     </p>
+    </section>
+    
+    <!--CAROUSEL-->
+    <section class="carousel" id="carousel" aria-label="Projects">
+        <ol class="carousel__viewport">
+
+            <!--SLIDE 1-->
+            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+
+            <div class="carousel_content">
+                Previous IT projects:
+                <ul class="carousel_ul">
+                    <li>- Performed multiple business-wide IT refits</li>
+                    <li>- Provided remote access solutions to Sage dataset</li>
+                    <li>- Implemented NAS drive backups for business-critical data</li>
+                    <li>- Spearheded remote IT support solutions throughout lockdown </li>
+                </ul>
+            </div>
+            
+            <div class="carousel__snapper">
+                <a href="#carousel__slide4"
+                class="carousel__prev">Go to last slide</a>
+                <a href="#carousel__slide2"
+                class="carousel__next">Go to next slide</a>
+            </div>
+            </li>
+            
+            <!--SLIDE 2-->
+            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+
+            <div class="carousel_content">
+                Previous IT responsibilities included:
+                <ul class="carousel_ul">
+                    <li>- Windows & 365 license management</li>
+                    <li>- Network cabinet mainteinance</li>
+                    <li>- Server installation and maintainance</li>
+                    <li>- On-site support</li>
+                    <li>- Sage Accounts dataset management and troubleshooting</li>
+                </ul>
+            </div>
+
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1"
+                class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+                class="carousel__next">Go to next slide</a>
+            </li>
+            
+            <!--SLIDE 3-->
+            <li id="carousel__slide3"
+                tabindex="0"
+                class="carousel__slide">
+
+            <div class="carousel_content">
+                Extra-curricular courses completed include:
+                <ul class="carousel_ul">
+                    <li>- “Intermediate Python for Non-Programmers” by Nick Walter</li>
+                    <li>- “Advanced Python” by Joe Marini</li>
+                    <li>- “Advanced Python: Working with Databases” by Kathryn Hodge</li>
+                    <li>- Various Blender courses - YouTube </li>
+                </ul>
+            </div>
+
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2"
+                class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4"
+                class="carousel__next">Go to next slide</a>
+            </li>
+
+            <!--SLIDE 4-->
+            <li id="carousel__slide4"
+                tabindex="0"
+                class="carousel__slide">
+            
+            <div class="carousel_content">
+                Thanks for reading the slides!
+                <ul class="carousel_ul">
+
+                </ul>
+            </div>
+
+                <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3"
+                class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1"
+                class="carousel__next">Go to first slide</a>
+            </li>
+        </ol> 
+        <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide1"
+                class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide2"
+                class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide3"
+                class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+                <a href="#carousel__slide4"
+                class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+            </ol>
+        </aside>
     </section>
     
     <script src="script.js"></script>
